@@ -9,7 +9,8 @@ public class PlayerMovement : NetworkBehaviour
     public GameObject playerHUD;
     public int playerScore;
     public static PlayerMovement Local { get; set; }
-    private CharacterController _controller;
+    public CharacterController _controller;
+
 
     [FormerlySerializedAs("PlayerSpeed")] public float playerSpeed = 2f;
 

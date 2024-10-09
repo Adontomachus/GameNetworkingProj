@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
 {
+    private static float matchTime = 30f;
+    public static bool gameOver = false;
     public GameObject PlayerPrefab;
     public Transform spawnPoint1, spawnPoint2;
     int playerSpawned = 0;
@@ -24,5 +26,13 @@ public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
             playerSpawned++;
 
         }
+    }
+    void Update()
+    {
+        if (matchTime < 0)
+        {
+            gameOver = true;
+        }
+        matchTime -= Time.deltaTime;
     }
 }

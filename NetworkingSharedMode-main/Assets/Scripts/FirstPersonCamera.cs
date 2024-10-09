@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 public class FirstPersonCamera : MonoBehaviour
 {
     private bool win;
-    private float matchTime;
+
     public TextMeshProUGUI text;
     public float healthAmount;
     public int totalScore;
@@ -20,11 +20,10 @@ public class FirstPersonCamera : MonoBehaviour
 
     private void Awake()
     {
-        matchTime = 30f;
     }
     private void Update()
     {
-        matchTime -= Time.deltaTime;
+
         PlayerMovement b = Authority.GetComponent<PlayerMovement>();
         totalScore = b.playerScore;
         PlayerHealth a = Authority.GetComponent<PlayerHealth>();

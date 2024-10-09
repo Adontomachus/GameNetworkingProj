@@ -247,6 +247,7 @@ MonoBehaviour:
   team1Spawn: {fileID: 0}
   team2Spawn: {fileID: 0}
   currentHealthAmount: 200
+  playerMovement: {fileID: 5724511627485295004}
 --- !u!114 &5483224496801029378
 MonoBehaviour:
   m_ObjectHideFlags: 0
